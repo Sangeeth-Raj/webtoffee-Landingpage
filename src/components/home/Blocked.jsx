@@ -51,21 +51,48 @@ const Container = styled.section`
     background: linear-gradient(117deg, #01112d -0.03%, #071d44 99.38%);
     position: relative;
     overflow: hidden;
+    .background {
+        @media all and (max-width: 980px) {
+            padding-bottom: 0;
+        }
+    }
+    @media all and (max-width: 768px) {
+        padding-top: 30px;
+    }
+    @media all and (max-width: 480px) {
+        padding-top: 0;
+    }
 
     &::after {
-        content: url("/images/backgroundCorner.svg");
+        content: "";
         position: absolute;
         top: 0;
         right: 0;
-        /* width: 50%; */
+        background: url("/images/backgroundCorner.svg") no-repeat;
+        background-size: contain;
         transform: translate(8%, -8%);
+        width: 80px;
+        height: 80px;
+        @media all and (max-width: 480px) {
+            width: 50px;
+            height: 50px;
+        }
     }
+
     &::before {
-        content: url("/images/backgroundCorner.svg");
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
+        background: url("/images/backgroundCorner.svg") no-repeat;
+        background-size: contain;
         transform: rotate(180deg) translate(8%, -8%);
+        width: 80px;
+        height: 80px;
+        @media all and (max-width: 480px) {
+            width: 50px;
+            height: 50px;
+        }
     }
     .thirdParty {
         display: flex;
@@ -73,12 +100,31 @@ const Container = styled.section`
         align-items: center;
         margin-top: 48px;
         padding-bottom: 130px;
+        flex-wrap: wrap;
+        @media all and (max-width: 1080px) {
+            padding-bottom: 70px;
+        }
+        @media all and (max-width: 768px) {
+            padding-bottom: 90px;
+        }
+        @media all and (max-width: 480px) {
+            padding-bottom: 60px;
+        }
         .thirdPartyLabel {
             padding: 10px 32px 10px 54px;
             width: 35%;
+            @media all and (max-width: 1080px) {
+                padding: 10px 0;
+            }
+            @media all and (max-width: 768px) {
+                width: 100%;
+            }
         }
         .services {
             width: 62%;
+            @media all and (max-width: 768px) {
+                width: 100%;
+            }
         }
     }
 `;

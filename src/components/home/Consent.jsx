@@ -13,7 +13,7 @@ export default function Consent() {
                 buttontext="Get Plugin Now"
                 sectionimage="/images/Consent-image.svg"
                 flip="row-reverse"
-                gdprdisplay={true}
+                gdprdisplay="true"
             />
         </>
     );

@@ -22,6 +22,11 @@ const Container = styled.div`
     height: 100%;
     justify-content: center;
     margin-right: 15px;
+    @media all and (max-width: 1080px) {
+        padding: 6px 0;
+        width: 210px;
+    }
+
     .icon {
         width: 30px;
         display: flex;

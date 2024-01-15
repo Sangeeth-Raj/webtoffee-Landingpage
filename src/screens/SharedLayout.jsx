@@ -35,7 +35,7 @@ export default function SharedLayout() {
                     </li>
                 </ul>
                 <Button
-                    text="login"
+                    text="Login"
                     width="140px"
                     backgroundcolor="none"
                     textcolor="#007FFF"
@@ -48,22 +48,70 @@ export default function SharedLayout() {
 }
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     margin-top: 64px;
     padding-top: 28px;
+    @media all and (max-width: 1280px) {
+        padding-top: 0;
+    }
+    @media all and (max-width: 480px) {
+        margin-top: 47px;
+    }
+
+    button.button {
+        @media all and (max-width: 1280px) {
+            width: 120px;
+        }
+        @media all and (max-width: 1080px) {
+            width: 100px;
+        }
+        @media all and (max-width: 980px) {
+            width: 80px;
+            padding: 5px 10px;
+        }
+        @media all and (max-width: 640px) {
+            width: 74px;
+            padding: 3px 10px;
+        }
+        @media all and (max-width: 480px) {
+            width: 60px;
+            padding: 1px 10px;
+        }
+    }
 
     .logo {
         display: flex;
         align-items: center;
         width: 250px;
+        @media all and (max-width: 1280px) {
+            width: 200px;
+        }
+        @media all and (max-width: 1080px) {
+            width: 170px;
+        }
+        @media all and (max-width: 640px) {
+            width: 150px;
+        }
+        @media all and (max-width: 480px) {
+            width: 120px;
+        }
     }
 
     ul {
         display: flex;
         align-items: center;
         gap: 16px;
+        @media all and (max-width: 1280px) {
+            gap: 6px;
+        }
+        @media all and (max-width: 1080px) {
+            gap: 10px;
+        }
+        @media all and (max-width: 980px) {
+            display: none;
+        }
 
         li {
             .active {
@@ -81,6 +129,10 @@ const Wrapper = styled.div`
                     bottom: 20%;
                     left: 7px;
                     border-radius: 10px;
+                    @media all and (max-width: 1080px) {
+                        left: 0;
+                        bottom: 0;
+                    }
                 }
             }
             a {
@@ -88,6 +140,13 @@ const Wrapper = styled.div`
                 text-transform: capitalize;
                 color: #747474;
                 position: relative;
+                font-size: 16px;
+                @media all and (max-width: 1280px) {
+                    font-size: 15px;
+                }
+                @media all and (max-width: 1080px) {
+                    padding: 0;
+                }
 
                 &:hover {
                     display: flex;
@@ -103,6 +162,10 @@ const Wrapper = styled.div`
                         bottom: 20%;
                         left: 7px;
                         border-radius: 10px;
+                        @media all and (max-width: 1080px) {
+                            left: 0;
+                            bottom: 0;
+                        }
                     }
                 }
             }

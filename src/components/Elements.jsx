@@ -18,7 +18,11 @@ export default function Elements({icon, altenate, title, minititle}) {
 
 const Container = styled.div`
     display: flex;
+    align-items: center;
     gap: 16px;
+    @media all and (max-width: 640px) {
+        gap: 10px;
+    }
 
     .elementleft {
         display: flex;
@@ -26,9 +30,13 @@ const Container = styled.div`
         border-radius: 8px;
         border: 1px solid #007fff;
         padding: 10px;
+        justify-self: center;
 
         .iconFrame {
             width: 20px;
+            @media all and (max-width: 1280px) {
+                width: 15px;
+            }
 
             img {
                 width: 100%;
@@ -37,6 +45,9 @@ const Container = styled.div`
     }
     .elementright {
         font-size: 16px;
+        @media all and (max-width: 1280px) {
+            font-size: 14px;
+        }
         .title {
             color: #747474;
             font-family: "nunito-bold";

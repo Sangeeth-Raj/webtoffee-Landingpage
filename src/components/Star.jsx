@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export default function Star({star, width}) {
     return (
-        <Container width={width}>
+        <Container width={width} className="starWidth">
             <div className="starFrame">
                 <img src={star} alt="star" />
             </div>
@@ -27,7 +27,7 @@ const Container = styled.div`
     align-items: center;
     gap: 8px;
 
-    .starframe {
+    .starFrame {
         width: ${(props) => (props.width ? props.width : "24px")};
     }
 `;

@@ -38,13 +38,15 @@ export default function TrustpilotReviewCard({
 
 const Container = styled.div`
     border-radius: 4px;
-    width: 420px;
     border: 1px solid #010e25;
     background: #fcfeff;
     padding: 34px;
     position: relative;
     margin-right: 30px;
     transition: 0.25s;
+    @media all and (max-width: 1280px) {
+        padding: 20px;
+    }
     &::after {
         content: url("/images/trustpilot-righttop.svg");
         position: absolute;
@@ -86,17 +88,34 @@ const Container = styled.div`
         border-radius: 2px;
         border: 1px solid #3283ff;
         margin-bottom: 32px;
+        @media all and (max-width: 1280px) {
+            margin-bottom: 20px;
+        }
+        @media all and (max-width: 1080px) {
+            width: 40px;
+            padding: 10px;
+        }
     }
     .title {
         font-family: "nunito-semibold";
         font-size: 18px;
         color: #747474;
         margin-bottom: 8px;
+        @media all and (max-width: 1080px) {
+            font-size: 17px;
+        }
     }
     .description {
         font-size: 16px;
         color: #747474;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
+        @media all and (max-width: 1280px) {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        @media all and (max-width: 1080px) {
+            font-size: 14px;
+        }
     }
     .user {
         display: flex;
@@ -120,17 +139,37 @@ const Container = styled.div`
                     color: #0a0a0a;
                     font-family: "nunito-medium";
                     font-size: 18px;
+                    @media all and (max-width: 1280px) {
+                        font-size: 17px;
+                    }
                 }
                 .date {
                     color: #747474;
                     font-size: 16px;
+                    @media all and (max-width: 1280px) {
+                        font-size: 14px;
+                    }
                 }
             }
         }
         .navyBlueStar {
+            .starWidth {
+                .starFrame {
+                    @media all and (max-width: 1280px) {
+                        width: 15px;
+                    }
+                }
+            }
         }
         .whiteStar {
             display: none;
+            .starWidth {
+                .starFrame {
+                    @media all and (max-width: 1280px) {
+                        width: 15px;
+                    }
+                }
+            }
         }
     }
 `;

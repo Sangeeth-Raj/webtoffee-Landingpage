@@ -8,9 +8,10 @@ export default function BoxContent({
 }) {
     return (
         <Container
-            boxtextcolor={boxtextcolor}
-            boxtextfont={boxtextfont}
-            boxtextsize={boxtextsize}>
+            className="boxMatter"
+            $boxtextcolor={boxtextcolor}
+            $boxtextfont={boxtextfont}
+            $boxtextsize={boxtextsize}>
             <p>{boxtext}</p>
         </Container>
     );
@@ -36,9 +37,15 @@ const Container = styled.div`
         border-radius: 4px;
     }
     p {
-        color: ${(prop) => (prop.boxtextcolor ? prop.boxtextcolor : "#747474")};
+        color: ${(prop) =>
+            prop.$boxtextcolor ? prop.$boxtextcolor : "#747474"};
         font-family: ${(prop) =>
-            prop.boxtextfont ? prop.boxtextfont : "nunito-medium"};
-        font-size: ${(prop) => (prop.boxtextsize ? prop.boxtextsize : "20px")};
+            prop.$boxtextfont ? prop.$boxtextfont : "nunito-medium"};
+        font-size: ${(prop) =>
+            prop.$boxtextsize ? prop.$boxtextsize : "17px"};
+        @media all and (max-width: 1080px) {
+            font-size: ${(prop) =>
+                prop.$boxtextsize ? prop.$boxtextsize : "15px"};
+        }
     }
 `;
